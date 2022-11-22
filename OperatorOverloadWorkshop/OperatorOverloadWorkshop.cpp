@@ -21,8 +21,8 @@ public:
         return temp;
     }
     A operator+(A) {  //+ operator overloaded to add any A type objects
-        int added = value + value;
-        return added;
+        int sum = value + value + value;
+        return sum;
     }
 };
 
@@ -46,7 +46,7 @@ int main()
     A a3 = add(a1, a2);
     a3.print();
 
-    A a4 = a1 + a2 +a3;
+    A a4 = a1+a2+a3;
     a4.print();
 
     A a5 = a4++;
