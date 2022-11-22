@@ -17,26 +17,23 @@ public:
     void print() { std::cout << "My value is " << value << std::endl; }
 
     A operator++(int){  // ++ operator overloaded to increment any A type objects
-        int temp = value + 1;
-        return temp;
+        int increment = value + 1;
+        return increment;
     }
-    A operator+(A) {  //+ operator overloaded to add any A type objects
-        int sum = value + value + value;
-        return sum;
+    A operator+(const A& obj) { //+ operator overloaded to add any A type objects to an addItem object, then the object is returned
+        A addItem(0);
+        addItem.value = value + obj.value;
+        return addItem;
     }
 };
-
-
 
 A add(A a1, A a2)
 {
     return A(a1.value + a2.value);
 }
 
-
 int main()
 {
- 
     A a1 = A(2);
     A a2 = A(3);
 
@@ -52,5 +49,4 @@ int main()
     A a5 = a4++;
     a5.print();
     return 0;
-
 }
