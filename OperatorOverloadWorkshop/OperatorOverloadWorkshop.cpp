@@ -14,18 +14,15 @@ public:
     int value{};
     A(int v) : value(v) {}
     void print() { std::cout << "My value is " << value << std::endl; }
+
 };
 
 /*A operator+(const A&) {
+}
 
+A operator++(const A&){
 }
 */
-A operator++(const A&){
-    A a;
-    ++a.value;
-    return a;
-}
-
 
 
 A add(A a1, A a2)
@@ -45,7 +42,7 @@ int main()
     A a3 = add(a1, a2);
     a3.print();
 
-    A a4 = ++a3;
+    /*A a4 = ++a3;
     a4.print();
-    return 0;
+    return 0;*/
 }
