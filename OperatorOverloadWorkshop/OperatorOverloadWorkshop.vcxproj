@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="OperatorOverloadWorkshop.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="OperatorOverloadWorkshop.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
